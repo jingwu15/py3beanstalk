@@ -28,14 +28,11 @@ Here is a short example, to illustrate the flavor of beanstalkc:
     >>> import beanstalkc3
     >>> beanstalk = beanstalkc3.Connection(host='localhost', port=11300)
     >>> beanstalk.put(b'ni hao !')
-    b'INSERTED' [b'1']
     1
     >>> job = beanstalk.reserve()
-    b'RESERVED' [b'1', b'8']
     >>> job.body
     b'ni hao !'
     >>> job.delete()
-    b'DELETED' []
 
 For more information, see [the tutorial](TUTORIAL.mkd), which will explain most
 everything.
