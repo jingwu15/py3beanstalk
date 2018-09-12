@@ -6,8 +6,8 @@ Job priorities are not preserved
 
 Setup a connection that won't parse YAML:
 
-    >>> import beanstalkc
-    >>> beanstalk = beanstalkc.Connection(host='localhost', port=11300,
+    >>> import beanstalkc3
+    >>> beanstalk = beanstalkc3.Connection(host='localhost', port=11300,
     ...                                   parse_yaml=False)
 
 Observe that YAML is not parsed:

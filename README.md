@@ -11,7 +11,7 @@ beanstalkc3 已经测试过, 再次执行
 python3 beanstalkc3.py
 执行前, 请启动全新的 beanstalkd 
 
-鸟语实在太难学, 只能用万年不变的中文了, 请见谅!
+鸟语实在太难学, 只能用的中文了, 请见谅!
 
 [beanstalkd]: http://kr.github.com/beanstalkd/
 [eventlet]: http://eventlet.net/
@@ -25,8 +25,8 @@ Usage
 
 Here is a short example, to illustrate the flavor of beanstalkc:
 
-    >>> import beanstalkc
-    >>> beanstalk = beanstalkc.Connection(host='localhost', port=11300)
+    >>> import beanstalkc3
+    >>> beanstalk = beanstalkc3.Connection(host='localhost', port=11300)
     >>> beanstalk.put(b'ni hao !')
     b'INSERTED' [b'1']
     1

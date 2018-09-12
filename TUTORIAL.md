@@ -1,9 +1,9 @@
-beanstalkc Tutorial
+beanstalkc3 Tutorial
 ===================
 
 Welcome, dear stranger, to a tour de force through beanstalkd's capabilities.
-Say hello to your fellow travel companion, the beanstalkc client library for
-Python. You'll get to know each other fairly well during this trip, so better
+Say hello to your fellow travel companion, the beanstalkc3 client library for
+Python3. You'll get to know each other fairly well during this trip, so better
 start off on a friendly note. And now, let's go!
 
 
@@ -13,15 +13,15 @@ Getting Started
 You'll need beanstalkd listening at port 11300 to follow along. So simply start
 it using: `beanstalkd -l 127.0.0.1 -p 11300`
 
-Besides having beanstalkc installed, you'll typically also need PyYAML. If you
-insist, you can also use beanstalkc without PyYAML. For more details see
+Besides having beanstalkc3 installed, you'll typically also need PyYAML. If you
+insist, you can also use beanstalkc3 without PyYAML. For more details see
 Appendix A of this tutorial.
 
-To use beanstalkc we have to import the library and set up a connection to an
+To use beanstalkc3 we have to import the library and set up a connection to an
 (already running) beanstalkd server:
 
-    >>> import beanstalkc
-    >>> beanstalk = beanstalkc.Connection(host='localhost', port=11300)
+    >>> import beanstalkc3
+    >>> beanstalk = beanstalkc3.Connection(host='localhost', port=11300)
 
 If we leave out the `host` and/or `port` parameters, `'localhost'` and `11300`
 would be used as defaults, respectively. There is also a `connect_timeout`
@@ -65,7 +65,7 @@ receive a job. If such a `reserve` times out, it will return `None`:
 If you use a timeout of 0, `reserve` will immediately return either a job or
 `None`.
 
-Note that beanstalkc requires job bodies to be strings, conversion to/from
+Note that beanstalkc3 requires job bodies to be strings, conversion to/from
 strings is left up to you:
 
     >>> beanstalk.put(42)
@@ -224,7 +224,7 @@ If you try to access job stats after the job was deleted, you'll get a
     >>> job.stats()                         # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
     ...
-    beanstalkc.CommandFailed: (b'stats-job', b'NOT_FOUND', [])
+    beanstalkc3.CommandFailed: (b'stats-job', b'NOT_FOUND', [])
 
 Let's have a look at some numbers for the `'default'` tube:
 
@@ -518,7 +518,7 @@ message and tell me what you think of it. And then go get yourself a treat. You
 certainly deserve it.
 
 
-Appendix A: beanstalkc and YAML
+Appendix A: beanstalkc3 and YAML
 -------------------------------
 
 As beanstalkd uses YAML for diagnostic information (like the results of
@@ -529,11 +529,11 @@ extension.
 [PyYAML]: http://pyyaml.org/
 [libyaml]: http://pyyaml.org/wiki/LibYAML
 
-If, for whatever reason, you cannot use PyYAML, you can still use beanstalkc
+If, for whatever reason, you cannot use PyYAML, you can still use beanstalkc3
 and just leave the YAML responses unparsed. To do that, pass `parse_yaml=False`
 when creating the `Connection`:
 
-    >>> beanstalk = beanstalkc.Connection(host='localhost',
+    >>> beanstalk = beanstalkc3.Connection(host='localhost',
     ...                                   port=11300,
     ...                                   parse_yaml=False)
 
@@ -553,7 +553,7 @@ capabilities of beanstalkd (`Connection#tubes`, `Connection#watching`,
 
 Alternatively, you can also pass a function to be used as YAML parser:
 
-    >>> beanstalk = beanstalkc.Connection(host='localhost',
+    >>> beanstalk = beanstalkc3.Connection(host='localhost',
     ...                                   port=11300,
     ...                                   parse_yaml=lambda x: x.split(b'\n'))
 

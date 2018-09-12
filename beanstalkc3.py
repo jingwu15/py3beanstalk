@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""beanstalkc - A beanstalkd Client Library for Python"""
+"""beanstalkc3 - A beanstalkd Client Library for Python"""
 
 import os
 import logging

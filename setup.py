@@ -13,10 +13,10 @@ setup(
 
     author='jingwu',
     author_email='jingwu@vip.163.com',
-    description='beanstalkd 的一个 python3 客户端库',
+    description='beanstalkd de yi ge python3 ke hu duan ku',
     long_description='''
-beanstalkc3 是 beanstalkd 的一个 python3 客户端库. 
-beanstalkd<http://kr.github.com/beanstalkd/> 是一个高速,分布式,内存级的消息队列服务
+beanstalkc3 shi beanstalkd de yi ge python3 ke hu duan ku. 
+beanstalkd<http://kr.github.com/beanstalkd/> shi yi ge gao su ,fen bu shi , nei cun ji de xiao xi dui lie fu wu.
 ''',
     url='https://github.com/jingwu15/beanstalkc3.git',
     license='Apache License, Version 2.0',
