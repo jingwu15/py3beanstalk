@@ -97,7 +97,6 @@ class Connection(object):
         assert isinstance(command, bytes), 'command must be a bytes instance'
         SocketError.wrap(self._socket.sendall, command)
         status, results = self._read_response()
-        print(status, results)
         if status in expected_ok:
             return results
         elif status in expected_err:
