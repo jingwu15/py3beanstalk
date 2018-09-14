@@ -3,7 +3,7 @@ beanstalkc
 
 beanstalkc3 是 beanstalkd 的一个 python3 客户端库. 
 [beanstalkd][] 是一个高速,分布式,内存级的消息队列服务
-beanstalkc3 依赖于 [PyYAML] []，但可以避免依赖，请参阅附录A.
+beanstalkc3 依赖于 [PyYAML][]，但可以避免依赖，请参阅附录A.
 beanstalkc 是纯Python，与 [eventlet][] 和 [gevent][] 兼容。
 beanstalkc3 是基于 [beanstalkc][] 的修改版, 仅支持 python3
 
