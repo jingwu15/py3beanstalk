@@ -1,14 +1,14 @@
 beanstalkc
 ==========
 
-beanstalkc3 是 beanstalkd 的一个 python3 客户端库. 
+py3beanstalk 是 beanstalkd 的一个 python3 客户端库. 
 [beanstalkd][] 是一个高速,分布式,内存级的消息队列服务
-beanstalkc3 依赖于 [PyYAML][]，但可以避免依赖，请参阅附录A.
+py3beanstalk 依赖于 [PyYAML][]，但可以避免依赖，请参阅附录A.
 beanstalkc 是纯Python，与 [eventlet][] 和 [gevent][] 兼容。
-beanstalkc3 是基于 [beanstalkc][] 的修改版, 仅支持 python3
+py3beanstalk 是基于 [beanstalkc][] 的修改版, 仅支持 python3
 
-beanstalkc3 已经测试过, 再次执行
-python3 beanstalkc3.py
+py3beanstalk 已经测试过, 再次执行
+python3 py3beanstalk.py
 执行前, 请启动全新的 beanstalkd 
 
 鸟语实在太难学, 只能用的中文了, 请见谅!
@@ -25,8 +25,8 @@ Usage
 
 Here is a short example, to illustrate the flavor of beanstalkc:
 
-    >>> import beanstalkc3
-    >>> beanstalk = beanstalkc3.Connection(host='localhost', port=11300)
+    >>> import py3beanstalk
+    >>> beanstalk = py3beanstalk.Connection(host='localhost', port=11300)
     >>> beanstalk.put(b'ni hao !')
     1
     >>> job = beanstalk.reserve()
